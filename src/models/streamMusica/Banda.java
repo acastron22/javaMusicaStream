@@ -30,8 +30,25 @@ public class Banda {
     public String getResumo() {
         return resumo;
     }
+    
+    public List<Album>getAlbuns(){
+        return albuns;
+    }
 
     public void setResumo(String resumo) {
         this.resumo = resumo;
+    }
+    
+    public void exibeMedia() {
+        double somaNotas = 0;
+        for (Avaliacao avaliacao : avaliacoes) {
+            somaNotas += avaliacao.getNota();
+        }
+        if (avaliacoes.isEmpty()) {
+            System.out.println("A banda " + getNome() + "Não foi avaliada ainda");
+        } else {
+            double media = somaNotas / avaliacoes.size();
+            System.out.println("Média das avaliações: " + media);
+        }
     }
 }

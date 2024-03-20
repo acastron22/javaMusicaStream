@@ -2,6 +2,7 @@ package Controlers.StreamMusica;
 
 
 import models.streamMusica.Banda;
+import util.AvisoDeEspera;
 import util.ControleDeMenus;
 
 import java.util.List;
@@ -23,8 +24,7 @@ public class MenuAdicionarBanda extends Menu {
                 " foi registrada com sucesso");
 
 
-        System.out.println("Aperte enter para voltar ao menu anterior");
-        scanner.nextLine();  // Aqui está a mudança
+        AvisoDeEspera.avisoDeEspera();
 
         ControleDeMenus.exibirOpcoesDoMenu(bandas);
     }
