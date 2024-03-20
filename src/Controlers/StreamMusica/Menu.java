@@ -6,10 +6,10 @@ import utilitarios.StreamMusica.MensagemBoasVindas;
 
 import java.util.List;
 
-public class Menu {
+public abstract class Menu {
 
-    public void Executa(List<Banda> bandas){
-        for (int i = 0; i<=5; i++){
+    public void executa(List<Banda> bandas){
+        for (int i = 0; i<=2; i++){
             System.out.println("\n");
         }        
     };
@@ -23,5 +23,4 @@ public class Menu {
         System.out.println(hashtag + "\n");
         
     }
-    
 }

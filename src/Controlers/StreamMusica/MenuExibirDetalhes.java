@@ -5,13 +5,12 @@ import util.ControleDeMenus;
 
 import java.util.List;
 
-public class MenuAvaliarBanda extends Menu  {
-
+public class MenuExibirDetalhes extends Menu {
     @Override
     public void executa(List<Banda> bandas) {
         super.executa(bandas);
-        super.exibeTitulo("Menu avaliando banda");
-        
+        super.exibeTitulo("Menu exibindo detalhes da banda");
+
         ControleDeMenus.exibirOpcoesDoMenu(bandas);
     }
 }
