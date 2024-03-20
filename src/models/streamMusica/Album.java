@@ -22,7 +22,7 @@ public class Album {
     public void exibeMusicasDoAlbum() {
         System.out.println("Musicas do álbum:");
         for (Musica musica : musicas) {
-            System.out.println("\n- " + musica.getNome());
+            musica.exibeFichaTecnica();
         }
     }
 

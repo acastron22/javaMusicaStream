@@ -37,6 +37,8 @@ public class MenuExibirDetalhes extends Menu {
                 System.out.print("    ");
                 album.exibeDuracaoTotal();
                 album.exibeMedia();
+                album.exibeMusicasDoAlbum();
+                
             }
         }
 

@@ -9,8 +9,6 @@ public class Banda {
     private List<Album> albuns = new ArrayList<>();
     private List<Avaliacao> avaliacoes = new ArrayList<>();
     
-    private Avaliacao avaliacao1=new Avaliacao();
-    
     public void avaliaBanda(Avaliacao avaliacao){
         this.avaliacoes.add(avaliacao);
     }
