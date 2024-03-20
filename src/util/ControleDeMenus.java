@@ -1,19 +1,18 @@
 package util;
 
 import Controlers.StreamMusica.*;
-import interfaces.MenuDisplayer;
 import interfaces.MenuOption;
 import models.streamMusica.Banda;
 
 import java.util.*;
 
 
-public class ControleDeMenus implements MenuDisplayer {
+public class ControleDeMenus {
 
     public static void exibirOpcoesDoMenu(List<Banda> listaBandas) {
 
         Scanner scanner = new Scanner(System.in);
-        Map<Integer, MenuOption> opcoes = getIntegerMenuOptionMap();
+        Map<Integer, Menu> opcoes = getIntegerMenuMap();
         System.out.println("Bem vindos ao Music Stream! A sua plataforma de música em Java!\n");
         System.out.println("Digite 1 para registrar uma banda");
         System.out.println("Digite 2 para registrar um álbum de uma banda");
@@ -26,7 +25,7 @@ public class ControleDeMenus implements MenuDisplayer {
 
         int opcaoEscolhida = scanner.nextInt();
 
-        MenuOption acao = opcoes.get(opcaoEscolhida);
+        Menu acao = opcoes.get(opcaoEscolhida);
         if (acao != null) {
             acao.executa(listaBandas);
         } else {
@@ -37,15 +36,15 @@ public class ControleDeMenus implements MenuDisplayer {
 
     }
 
-    private static Map<Integer, MenuOption> getIntegerMenuOptionMap() {
-        Map<Integer, MenuOption> opcoes = new HashMap<>();
-        opcoes.put(1, (bandas) -> new MenuAdicionarBanda().executa(bandas));
-        opcoes.put(2, (bandas) -> new MenuAdicionarAlbum().executa(bandas));
-        opcoes.put(3, (bandas) -> new MenuMostrarBandas().executa(bandas));
-        opcoes.put(4, (bandas) -> new MenuAvaliarBanda().executa(bandas));
-        opcoes.put(5, (bandas) -> new MenuAvaliarAlbum().executa(bandas));
-        opcoes.put(6, (bandas) -> new MenuExibirDetalhes().executa(bandas));
-        opcoes.put(-1, (bandas) -> new MenuSair().executa(bandas));
+    private static Map<Integer, Menu> getIntegerMenuMap() {
+        Map<Integer, Menu> opcoes = new HashMap<>();
+        opcoes.put(1, new MenuAdicionarBanda());
+        opcoes.put(2, new MenuAdicionarAlbum());
+        opcoes.put(3, new MenuMostrarBandas());
+        opcoes.put(4, new MenuAvaliarBanda());
+        opcoes.put(5, new MenuAvaliarAlbum());
+        opcoes.put(6, new MenuExibirDetalhes());
+        opcoes.put(-1, new MenuSair());
         return opcoes;
     }
 }
