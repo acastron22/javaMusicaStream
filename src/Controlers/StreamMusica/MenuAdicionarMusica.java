@@ -14,6 +14,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MenuAdicionarMusica extends Menu {
+    // A classe MenuAdicionarMusica herda da classe Menu.
+    // É um menu específico para adicionar uma música a um álbum de uma banda.
+    
+    
+    // atenção, esse método poderia ter métodos isolados aqui dentro,
+    // ou em outro tipo de contralador. sabe dizer quais?
     @Override
     public void executa(List<Banda> bandas) {
         super.executa(bandas);

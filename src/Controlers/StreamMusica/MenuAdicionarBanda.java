@@ -9,9 +9,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MenuAdicionarBanda extends Menu {
+    // A classe MenuAdicionarBanda herda da classe abstrata Menu.
+    // É um menu específico para a adição de uma banda.
     
     @Override
     public void executa(List<Banda> bandas){
+        // Implementação do método abstrato 'executa' da classe pai.
+        // O método recebe uma lista de bandas e adiciona uma nova 
+        // banda à lista após fazer algumas perguntas ao usuário.
         super.executa(bandas);
         super.exibeTitulo("Menu de adição de banda");
         System.out.println("Digite o nome da Banda que deseja adicionar");
