@@ -38,11 +38,11 @@ public class Album {
         
         /* 
         * Aqui, estamos percorrendo a lista musicas, que são as músicas em seu álbum. 
-        * Para cada Musica na lista, estamos pegando a duração da música 
+        * Para cada Música na lista, estamos pegando a duração da música 
         * (musica.getDuracao()) e somando à variável duracaoTotal. 
-        * A variável musica aqui é uma variável temporária que é usada para representar 
+        * A variável música aqui é uma variável temporária usada para representar 
         * a música atual à medida que percorremos a lista. 
-        * O operador -> é usado em expressões lambda no Java para separar os 
+        * O operador '->' é usado em expressões lambda no Java para separar os 
         * parâmetros da ação a ser realizada.
         * */
         // Itera sobre todas as músicas para somar as durações.
@@ -56,6 +56,15 @@ public class Album {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    public void exibeDetalhesDoAlbum(){
+        // metodo que vai chamar os outros métodos e imprimir os detalhes
+        // Do álbum
+        System.out.println(getNome());
+        exibeDuracaoTotal();
+        exibeMusicasDoAlbum();
+        exibeMedia();
     }
 
     public void exibeMedia() {

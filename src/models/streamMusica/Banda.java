@@ -61,4 +61,10 @@ public class Banda {
             // Exibe a média das avaliações.
         }
     }
+    
+    public void exibeDetalhesBanda(){
+        System.out.println("Detalhes da banda:");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Resumo: " + getResumo());
+    }
 }

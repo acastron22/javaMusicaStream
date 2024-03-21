@@ -35,3 +35,10 @@ public abstract class Menu {
         
     }
 }
+/*
+* A classe Menu é uma classe abstrata que tem como objetivo fornecer um 
+* esqueleto para como um menu deveria se comportar. Classes que herdam 
+* de Menu precisam implementar o método executa(). Além disso, a classe 
+* fornece um método conveniente exibeTitulo() para exibir um título de 
+* maneira formatada.
+* */

@@ -34,3 +34,11 @@ public class MenuAdicionarBanda extends Menu {
         ControleDeMenus.exibirOpcoesDoMenu(bandas);
     }
 }
+/*
+* A classe MenuAdicionarBanda é um menu específico que permite ao 
+* usuário adicionar uma nova banda à lista de bandas existentes. 
+* Coleta o nome da banda do usuário, cria um novo objeto Banda com 
+* o nome fornecido e, em seguida, adiciona a nova banda à lista de 
+* bandas. Após a adição bem-sucedida, o usuário é redirecionado de 
+* volta para o menu principal.
+* */

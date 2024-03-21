@@ -18,12 +18,14 @@ public class MenuAdicionarMusica extends Menu {
     // É um menu específico para adicionar uma música a um álbum de uma banda.
     
     
-    // atenção, esse método poderia ter métodos isolados aqui dentro,
-    // ou em outro tipo de contralador. sabe dizer quais?
+    // Atenção, esse método poderia ter métodos isolados aqui dentro,
+    // ou em outro tipo de contralador. Sabe dizer quais?
     @Override
     public void executa(List<Banda> bandas) {
         super.executa(bandas);
+        // Chama o método da classe pai para algumas operações iniciais.
         super.exibeTitulo("Menu de adição de música");
+        // Usa o método exibeTitulo da classe pai para exibir o título deste menu específico.
 
         Scanner scanner = new Scanner(System.in);
 
@@ -32,11 +34,11 @@ public class MenuAdicionarMusica extends Menu {
         String bandaDigitada = scanner.nextLine();
 
         Banda bandaSelecionada = VerificaBanda.getBandaPorNome(bandas, bandaDigitada);
-
+        // Usa o método getBandaPorNome da classe VerificaBanda para obter a banda correta.
 
         if (bandaSelecionada == null) {
             System.out.println("Banda não encontrada! Deseja tentar novamente? (s/n)");
-
+            // Se a banda não for encontrada, informa o usuário e chama o método executa novamente.
             executa(bandas);
         } else {
             System.out.println("Qual o nome do álbum?");
@@ -67,7 +69,12 @@ public class MenuAdicionarMusica extends Menu {
                 ControleDeMenus.exibirOpcoesDoMenu(bandas);
             }
         }
-        
-
     }
 }
+/*
+* A classe MenuAdicionarMusica fornece um menu que permite ao 
+* usuário adicionar uma música a um álbum de uma banda existente. 
+* Junto com o fluxo principal que solicita ao usuário o nome da 
+* banda, do álbum e as informações da música, existem verificações 
+* para garantir que a banda e o álbum escolhidos existam.
+* */

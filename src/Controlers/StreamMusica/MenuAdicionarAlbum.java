@@ -71,3 +71,10 @@ public class MenuAdicionarAlbum extends Menu {
         }
     }
 }
+/*
+* A MenuAdicionarAlbum é uma classe de menu especializado que 
+* permite ao usuário adicionar um álbum a uma banda de uma lista 
+* dada de bandas. Solicita ao usuário o nome da banda, em seguida, 
+* pede que nomeie o álbum e o adicione à banda selecionada. Uma vez 
+* concluído, o menu principal é exibido novamente.
+*/
