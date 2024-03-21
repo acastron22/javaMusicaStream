@@ -10,10 +10,16 @@ import java.util.*;
 public class ControleDeMenus {
     
     public static Scanner scanner = new Scanner(System.in);
+    
+    /*
+    Na classe ControleDeMenus, há um método estático exibirOpcoesDoMenu(List<Banda> listaBandas). 
+    Esta função é responsável por exibir as opções do menu e depois executar 
+    a ação correspondente à opção selecionada.
+    * */
 
     public static void exibirOpcoesDoMenu(List<Banda> listaBandas) {
 
-        
+        // Código que mostra as opções de menu
         Map<Integer, Menu> opcoes = getIntegerMenuMap();
         System.out.println("Bem vindos ao Music Stream! A sua plataforma de música em Java!\n");
         System.out.println("Digite 1 para registrar uma banda");
@@ -27,16 +33,26 @@ public class ControleDeMenus {
 
 
         int opcaoEscolhida = scanner.nextInt();
+        // A opção escolhida pelo usuário é lida a partir da linha de comando.
 
         Menu acao = opcoes.get(opcaoEscolhida);
+        // O objeto Menu correspondente a ser executado é recuperado a partir do Map.
         if (acao != null) {
             acao.executa(listaBandas);
+            // Se uma opção válida foi escolhida, execute a ação correspondente.
         } else {
             System.out.println("Opção inválida");
             exibirOpcoesDoMenu(listaBandas);
+            // Se uma opção inválida foi escolhida, exiba o menu novamente.
         }
 
     }
+    
+    
+    /*
+    * O método getIntegerMenuMap() cria um Mapa onde as chaves são inteiros representando as opções do menu, 
+    * e os valores são instâncias da classe Menu ou subclasses, que encapsulam as ações correspondentes a cada opção.
+    */
 
     private static Map<Integer, Menu> getIntegerMenuMap() {
         Map<Integer, Menu> opcoes = new HashMap<>();
