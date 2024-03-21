@@ -18,3 +18,11 @@ public class AvisoDeEspera {
         }
     }
 }
+
+/*
+* Em resumo, a classe AvisoDeEspera fornece um método para imprimir 
+* uma mensagem de espera e depois pausar a execução do programa por 
+* um breve período (2,5 segundos). Isso pode servir para 
+* dar feedback ao usuário de que algo está acontecendo (como tarefas 
+* de processamento ou carga) antes de retornar ao menu principal.
+* */
